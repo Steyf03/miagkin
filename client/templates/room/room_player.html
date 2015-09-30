@@ -1,0 +1,22 @@
+<template name="roomPlayer">
+	{{this.name}}
+	{{#if isUser}}
+		{{#if isReady}}
+			<a class="roomReady roomBtn btn btn-success" href="#">Ready</a>
+		{{else}}
+			<a class="roomReady roomBtn btn btn-danger" href="#">Ready</a>
+		{{/if}}
+		{{#if ownRoom}}
+			<a class="roomLaunch roomBtn btn btn-warning" href="#" style="margin-right: 6px">Launch Game</a>
+		{{/if}}
+	{{else}}
+		{{#if isReady}}
+			<a class="roomBtn btn btn-success">Ready</a>
+		{{else}}
+			<a class="roomBtn btn btn-danger">Ready</a>
+		{{/if}}		
+	{{/if}}
+	{{#if ownRoom}}
+		<a class="roomBtn btn btn-primary" style="margin-right: 6px">Master</a>
+	{{/if}}
+</template>

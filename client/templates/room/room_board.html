@@ -1,0 +1,8 @@
+<template name="roomBoard">
+	{{> roomItem}}
+	{{#each players}}
+		<div class="room">
+			{{> roomPlayer}}
+		</div>
+	{{/each}}
+</template>

@@ -1,0 +1,27 @@
+<template name="roomsItem">
+	<div class="room">
+		<div class="room-content">
+			<h3>
+				{{#if inRoom}}
+					<a href="{{pathFor 'roomBoard'}}">{{name}}</a>
+				{{else}}
+					<a href="" class="roomJoin">{{name}}</a>
+				{{/if}}
+				<span>({{playersCount}})</span>
+			</h3>
+			<p>
+				created by {{author}}
+			</p>
+		</div>
+
+		{{#if gameStarted}}
+			<a href="" class="gameEnter roomBtn btn btn-success">Continue Playing</a>
+		{{else}}
+			{{#if inRoom}}
+				<a href="{{pathFor 'roomBoard'}}" class="roomBtn btn btn-primary" style="margin-left: 8px">Enter</a>
+			{{else}}
+				<a href="" class="roomJoin roomBtn btn btn-success">Join Room</a>
+			{{/if}}
+		{{/if}}
+	</div>
+</template>

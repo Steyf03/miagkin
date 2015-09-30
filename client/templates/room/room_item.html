@@ -1,0 +1,13 @@
+<template name="roomItem">
+	<div class="room">
+		<div class="room-content">
+			<h3><a href="">{{name}}</a><span>({{playersCount}})</span></h3>
+			<p>
+			</p>
+		</div>
+		{{#if ownRoom}}
+			<a class="roomDelete roomBtn btn btn-danger" href="#" style="margin-left: 6px">x</a>
+			<a class="roomBtn btn btn-primary" href="{{pathFor 'roomsEdit'}}">o</a>
+		{{/if}}
+	</div>
+</template>
