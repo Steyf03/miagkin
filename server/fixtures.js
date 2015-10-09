@@ -1,20 +1,4 @@
 if (Cards.find().count() === 0) {
-	// Cards.insert({
-	// 	deck: '',
-	// 	type: '',
-	// 	name: '',
-	// 	desc: '',
-	// 	image: '',
-	// 	left: [''],
-	// 	right: 0,
-	// 	bonus: [
-	// 		{
-	// 			value: 0,
-	// 			type: ''
-	// 		}
-	// 	],
-	// 	condition: ''		
-	// });
 	Cards.insert({
 		deck: 'tresor',
 		type: 'equipement',

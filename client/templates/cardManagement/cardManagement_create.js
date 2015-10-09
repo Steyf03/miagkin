@@ -5,22 +5,22 @@ Template.cardManagementCreate.events({
 		// Processing the values entered by user
 		var leftValues = $(e.target).find('[name=left]').val();
 		var leftValues = leftValues.split(",");
-		var rightValues = $(e.target).find('[name=right]').val();
-		var rightValues = rightValues.split(",");
-		var rightArray = [];
-		for(var i = 0; i < rightValues.length; i+=2)
+		var bonusValues = $(e.target).find('[name=bonus]').val();
+		var bonusValues = bonusValues.split(",");
+		var bonusArray = [];
+		for(var i = 0; i < bonusValues.length; i+=2)
 		{
-			rightArray[i/2] = { value : rightValues[i], type : rightValues[i+1] };
+			bonusArray[i/2] = { value : bonusValues[i], type : bonusValues[i+1] };
 		}
 
 		var card = {
 			deck: $(e.target).find('[name=deck]').val(),
 			type: $(e.target).find('[name=type]').val(),
 			name: $(e.target).find('[name=name]').val(),
-			desc: $(e.target).find('[name=descleft]').val(),
+			desc: $(e.target).find('[name=desc]').val(),
 			left: leftValues,
-			right: rightArray,
-			bonus: $(e.target).find('[name=bonus]').val(),
+			right: $(e.target).find('[name=right]').val(),
+			bonus: bonusArray,
 			condition: $(e.target).find('[name=restriction]').val()+$(e.target).find('[name=condition]').val()
 		};
 
