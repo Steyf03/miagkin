@@ -1,0 +1,11 @@
+<template name="cardHandItem">
+	<div class="hvr-grow card" style="display: inline-block; position: relative; border: 1px gray solid; border-radius: 4px; width: 120px; height: 170px; background: #F2F2F2; cursor: pointer; overflow: hidden; font-size: 0.9em;">
+		<br>
+		<div style="text-align: center; font-size: 0.8em"><p>{{name}}</p></div>
+		<div style="text-align: center; font-size: 0.7em"><p>{{conditionToString}}</p></div>
+		<br>
+		<div style="text-align: center; font-size: 0.7em">{{desc}}</div>
+		<div style="position: absolute; bottom: 15px; left: 15px; font-size: 0.6em;">{{leftToString}}</div>
+		<div style="position: absolute; bottom: 15px; right: 15px; font-size: 0.6em;">{{rightToString}}</div>
+	</div>
+</template>

@@ -1,0 +1,9 @@
+<template name="handBoard">
+	<div class="handWrapper" style="position: fixed; bottom: -50px; left: 0; width: 100%;">
+		<div class="handBoard" style="text-align: center;">
+			{{#each cards}}
+				{{> cardHandItem}}
+			{{/each}}
+		</div>
+	</div>
+</template>
